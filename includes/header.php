@@ -1,6 +1,6 @@
 <?php
 session_start(); // make sure session is started
-$loggedIn = isset($_SESSION['authed']);
+$loggedIn = isset($_SESSION['logged_in']);
 ?>
 
 <header>
