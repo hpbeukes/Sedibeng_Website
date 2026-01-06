@@ -8,5 +8,6 @@
         <a href="calendar.php">Calendar</a>
         <a href="links.php">Links</a>
         <a href="about.php">About Us</a>
+		<a href="admin/edit-home.php">Admin</a>
     </nav>
 </header>

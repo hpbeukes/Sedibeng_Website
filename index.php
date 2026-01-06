@@ -1,3 +1,12 @@
+<?php
+include __DIR__ . '/includes/config.php';
+include BASE_PATH . '/includes/Parsedown.php';
+
+$Parsedown = new Parsedown();
+$Parsedown->setSafeMode(true);
+$content = file_get_contents(BASE_PATH . '/content/home.md');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,15 +15,15 @@
 </head>
 <body>
 
-<?php include __DIR__ . '/includes/header.php'; ?>
+
+<?php include BASE_PATH . '/includes/header.php'; ?>
 
 <main>
-<?php
-echo nl2br(file_get_contents(__DIR__ . '/content/home.txt'));
-?>
+    <?= $Parsedown->text($content); ?>
 </main>
 
-<?php include __DIR__ . '/includes/footer.php'; ?>
+<?php include BASE_PATH . '/includes/footer.php'; ?>
+
 
 </body>
 </html>
