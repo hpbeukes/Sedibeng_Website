@@ -10,9 +10,15 @@ header {
     padding: 10px 20px;
 }
 
-.logo {
-    height: 50px;
+.login {
+	height: 50px;
     margin-right: 20px;
+}
+
+/* Nav bar aligned left */
+nav {
+    margin-top: 15px;
+    text-align: left;
 }
 
 nav a {
@@ -59,4 +65,98 @@ footer {
 .gallery img:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+main h1, main h2, main h3 {
+    margin-top: 20px;
+}
+
+main p {
+    line-height: 1.6;
+}
+
+main ul {
+    padding-left: 20px;
+}
+
+/* new stuff */
+/* Header top layout */
+
+
+
+
+
+.login-container {
+    justify-self: end; /* login/logout right */
+}
+
+.logo {
+    height: 80px;
+}
+
+.login-icon {
+    height: 40px;
+}
+
+/* Nav bar aligned left */
+.main-nav {
+    margin-top: 15px;
+    text-align: left;
+}
+
+/* Nav links */
+/*.main-nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #22359;
+}*/
+
+.main-nav a:hover {
+    color: black;
+}
+
+/* FORCE HEADER STRUCTURE */
+.site-header {
+    display: block !important;
+    width: 100%;
+}
+
+/* TOP ROW */
+.header-top {
+    display: grid !important;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    width: 100%;
+}
+
+/* LOGO LEFT */
+.logo-container {
+    justify-self: start;
+}
+
+/* TITLE CENTERED */
+.site-title {
+    text-align: center;
+    margin: 0;
+    font-size: 2.5rem;
+	color: #022359;
+}
+
+/* FORCE NAV TO NEW LINE */
+.nav-row {
+    display: block !important;
+    width: 100%;
+    clear: both;
+}
+
+.main-nav {
+    display: block !important;
+    width: 100%;
+    margin-top: 10px;
+	color: #022359;
+}
+
+.auth_h2_class {
+	color: #022359
 }
