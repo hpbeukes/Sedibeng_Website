@@ -1,0 +1,8 @@
+{
+    "name": "user-pc/sedibeng_website",
+    "description": "Sedibeng Jukskei",
+    "type": "project",
+    "require": {
+        "robthree/twofactorauth": "^3.0"
+    }
+}
