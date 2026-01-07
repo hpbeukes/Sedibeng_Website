@@ -1,9 +1,17 @@
-<?php include __DIR__ . '/includes/config.php'; ?>
+<?php
+include __DIR__ . '/includes/config.php';
+include BASE_PATH . '/includes/Parsedown.php';
+
+$Parsedown = new Parsedown();
+$Parsedown->setSafeMode(true);
+$content = file_get_contents(BASE_PATH . '/content/links.md');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Links</title>
+    <title>Sedibeng Jukskei * Links</title>
 
     <!-- CSS ALWAYS goes here -->
     <link rel="stylesheet" href="<?= BASE_URL ?>/css/style.css">
@@ -12,10 +20,8 @@
 
 <?php include BASE_PATH . '/includes/header.php'; ?>
 
-<main>
-<?php
-echo nl2br(file_get_contents(__DIR__ . '/content/links.txt'));
-?>
+<main class="gallery">
+    <?= $Parsedown->text($content); ?>
 </main>
 
 <?php include BASE_PATH . '/includes/footer.php'; ?>
