@@ -10,9 +10,9 @@ $loggedIn = isset($_SESSION['logged_in']);
       <div class="logo-container">
           <img src="/sedibeng/logo.png" alt="Logo" class="logo">
       </div>
-      <div class="title-container">
+      <!-- <div class="title-container"> -->
           <h1 class="site-title">Sedibeng Jukskei</h1>
-      </div>
+      <!-- </div> -->
       <div class="login-container">
           <?php if ($loggedIn): ?>
               <a href="<?= BASE_URL ?>/auth/logout.php">

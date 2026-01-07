@@ -117,7 +117,8 @@ main ul {
     display: grid;
     grid-template-columns: auto 1fr auto; /* logo | title | login */
     align-items: center;
-    padding: 10px 20px;
+    width: 100%;
+	gap: 10px;
 }
 
 /* LOGO LEFT */
@@ -156,15 +157,16 @@ main ul {
 .title-container {
     text-align: center;
 }
-.site-title {
-    margin: 0;
+.site-title {    
     font-size: 2rem;
     color: #022359;
+	justify-self: center;
+    text-align: center;
 }
 
 /* Login icon right */
 .login-container {
-    text-align: right;
+    justify-self: end;
 }
 .login-icon {
     height: 40px;
