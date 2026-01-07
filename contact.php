@@ -12,13 +12,14 @@ $content = file_get_contents(BASE_PATH . '/content/contact.md');
 <head>
     <meta charset="UTF-8">
     <title>Sedibeng * Contact Us</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
     <link rel="stylesheet" href="<?= BASE_URL ?>/css/style.css">
 </head>
 <body>
 
 <?php include BASE_PATH . '/includes/header.php'; ?>
 
-<main class="main-nav">
+<main class="main-body">
     <?= $Parsedown->text($content); ?>
 </main>
 

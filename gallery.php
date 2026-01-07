@@ -1,11 +1,10 @@
 <?php include __DIR__ . '/includes/config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head lang="en">
     <meta charset="UTF-8">
     <title>Sedibeng Jukskei * Gallery</title>
-
-    <!-- CSS ALWAYS goes here -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= BASE_URL ?>/css/style.css">
 </head>
 <body>
