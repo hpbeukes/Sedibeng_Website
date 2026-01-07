@@ -201,31 +201,23 @@ main ul {
 
 /* Mobile responsive */
 @media (max-width: 768px) {
-    .header-top {
-        grid-template-columns: 1fr auto 1fr; /* logo | hamburger | login stacked differently */
-    }
-
-    .site-title {
-        font-size: 1.5rem;
-    }
-
-    .login-icon {
-        height: 35px;
-    }
-
     .hamburger {
         display: block;
-        grid-column: 2;
-        justify-self: end;
+        font-size: 2rem;
+        cursor: pointer;
+        margin: 5px 20px;
     }
 
+    /* hide nav by default */
     .main-nav {
         display: none;
         flex-direction: column;
         width: 100%;
         padding: 10px 0;
     }
-    .nav-toggle:checked + .hamburger + .main-nav {
+
+    /* show nav when checkbox checked */
+    .nav-toggle:checked ~ .main-nav {
         display: flex;
     }
 }
