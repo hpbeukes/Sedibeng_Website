@@ -11,7 +11,7 @@ $content = file_get_contents(BASE_PATH . '/content/links.md');
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sedibeng Jukskei * Links</title>
+    <title>Sedibeng Jukskei * Skakels</title>
 
     <!-- CSS ALWAYS goes here -->
     <link rel="stylesheet" href="<?= BASE_URL ?>/css/style.css">

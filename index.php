@@ -10,7 +10,7 @@ $content = file_get_contents(BASE_PATH . '/content/home.md');
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Home</title>
+    <title>Sedibeng Jukskei</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,7 +18,7 @@ $content = file_get_contents(BASE_PATH . '/content/home.md');
 
 <?php include BASE_PATH . '/includes/header.php'; ?>
 
-<main>
+<main class="main-nav">
     <?= $Parsedown->text($content); ?>
 </main>
 
