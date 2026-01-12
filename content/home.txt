@@ -1,4 +1,0 @@
-Welcome to our website!
-
-This content is loaded from a text file.
-You can edit this file without touching HTML.

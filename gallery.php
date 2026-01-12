@@ -1,11 +1,10 @@
 <?php include __DIR__ . '/includes/config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head lang="en">
     <meta charset="UTF-8">
-    <title>Gallery</title>
-
-    <!-- CSS ALWAYS goes here -->
+    <title>Sedibeng Jukskei * Gallery</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= BASE_URL ?>/css/style.css">
 </head>
 <body>
@@ -13,8 +12,6 @@
 <?php include BASE_PATH . '/includes/header.php'; ?>
 
 <main>
-    <h2>Gallery</h2>
-
     <div class="gallery">
         <?php
         $folder = BASE_PATH . '/images/gallery/';
