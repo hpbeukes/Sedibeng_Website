@@ -1,0 +1,22 @@
+name: Deploy to Test Server
+
+on:
+  push:
+    branches:
+      - pre_master
+
+jobs:
+  ftp-deploy-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout pre_master branch
+        uses: actions/checkout@v4
+
+      - name: Deploy via FTP to Test Server
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.TEST_FTP_IP_ADDRESS }} 
+          username: ${{ secrets.TEST_USER }}
+          password: ${{ secrets.TEST_PASSWORD }}
+          server-dir: /
