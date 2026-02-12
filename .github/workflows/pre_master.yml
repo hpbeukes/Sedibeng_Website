@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - pre_master
+  workflow_dispatch:    
 
 jobs:
   ftp-deploy-test:
