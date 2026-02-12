@@ -11,12 +11,17 @@ require __DIR__ . '/../includes/config.php';
 <head>
     <title>Account Not Verified</title>
     <link rel="stylesheet" href="/sedibeng/css/style.css">
+
 </head>
 <body>
 
 <?php include BASE_PATH . '/includes/header_users.php'; ?>
 
-<h2 class="auth_h2_class">Account Not Yet Verified</h2>
+<div style="width:100%; text-align:center;">
+    <h2 class="auth_h2_class">
+        Account Not Yet Verified
+    </h2>
+</div>
 
 <div style="max-width:600px;margin:0 auto;text-align:center;">
 
@@ -48,11 +53,10 @@ require __DIR__ . '/../includes/config.php';
 
     <br>
 
-    <form action="../index.php" method="get">
-        <button type="submit" style="padding:10px 25px;">
-            Home
-        </button>
-    </form>
+     <!-- Home button styled like header nav links -->
+    <a href="../index.php" class="main-nav-link" style="display:inline-block; margin-top:20px;">
+        Home
+    </a>
 
 </div>
 
