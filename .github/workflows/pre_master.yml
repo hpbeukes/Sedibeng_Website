@@ -21,3 +21,4 @@ jobs:
           username: ${{ secrets.TEST_USER }}
           password: ${{ secrets.TEST_PASSWORD }}
           server-dir: /
+          timeout: 600000
