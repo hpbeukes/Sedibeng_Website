@@ -1,0 +1,66 @@
+name: Release to Production
+
+on:
+  workflow_dispatch:   # Manual trigger button in GitHub
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: master
+          branch: pre_master
+          title: "Release: pre_master to master"
+          body: "Automated release PR"
+
+  merge-pr:
+    needs: create-pr
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Merge Pull Request
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: pulls } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open",
+              head: context.repo.owner + ":pre_master",
+              base: "master"
+            });
+
+            if (pulls.length > 0) {
+              await github.rest.pulls.merge({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pulls[0].number,
+                merge_method: "merge"
+              });
+            }
+
+  deploy-production:
+    needs: merge-pr
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout master branch
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Deploy via FTP to Production
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.PROD_FTP_IP_ADDRESS }}
+          username: ${{ secrets.PROD_USER }}
+          password: ${{ secrets.PROD_PASSWORD }}
+          server-dir: /
