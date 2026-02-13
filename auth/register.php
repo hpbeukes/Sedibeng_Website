@@ -16,9 +16,6 @@ require BASE_PATH . '/vendor/autoload.php';
 use RobThree\Auth\TwoFactorAuth;
 use RobThree\Auth\Providers\Qr\QRServerProvider;
 
-define('RECAPTCHA_SITE_KEY', '6LfQPGksAAAAAHqANSvawjnUjYG5U6enQT12Nmzy');
-define('RECAPTCHA_SECRET_KEY', '6LfQPGksAAAAAK50MAX1ZuNO43tgkgFMu_-I4rWy');
-
 $error = '';
 $step  = $_SESSION['reg_step'] ?? 1;
 
