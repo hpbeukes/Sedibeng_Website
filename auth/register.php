@@ -4,14 +4,10 @@ declare(strict_types=1);
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-session_start();
-
 ini_set('session.cookie_httponly', '1');
 ini_set('session.use_strict_mode', '1');
 
-define('RECAPTCHA_SITE_KEY', '6LeT2mgsAAAAALLbN1M54UnfCFv-C1zYLjTds-ci');
-define('RECAPTCHA_SECRET_KEY', '6LeT2mgsAAAAANPCoaDgbXPl17rkFkPI3XvIGqfX');
-
+session_start();
 
 require __DIR__ . '/../includes/config.php';
 require BASE_PATH . '/includes/db.php';
